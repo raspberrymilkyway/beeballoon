@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bee : MonoBehaviour
 {
@@ -45,8 +46,9 @@ public class Bee : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision coll) {
-        if(coll.gameObject.tag == "redboxofdoom") {
-            Destroy(this.gameObject);
+        if(coll.gameObject.tag == "redboxofdoom" || coll.gameObject.tag == "bomb") {
+            //Destroy(this.gameObject);
+            SceneManager.LoadScene("level-1");
         }
     }
 }

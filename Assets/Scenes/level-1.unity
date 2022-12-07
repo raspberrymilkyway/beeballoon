@@ -618,7 +618,7 @@ Transform:
   - {fileID: 1506934285}
   - {fileID: 188187866}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &187114578
 PrefabInstance:
@@ -1185,7 +1185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7121905487372706945, guid: dfc5983f7d074504ea1b1fc58410382f, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7121905487372706945, guid: dfc5983f7d074504ea1b1fc58410382f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6309,9 +6309,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1818707852}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spikes
-  m_TagString: Untagged
+  m_TagString: redboxofdoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
