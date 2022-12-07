@@ -1958,7 +1958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2885056801169489640, guid: c2aa01ea216d3894e82cb74b5f3d5da8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1531
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2885056801169489640, guid: c2aa01ea216d3894e82cb74b5f3d5da8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1998,6 +1998,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2aa01ea216d3894e82cb74b5f3d5da8, type: 3}
+--- !u!1 &498943017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6388229096789954853, guid: c2aa01ea216d3894e82cb74b5f3d5da8, type: 3}
+  m_PrefabInstance: {fileID: 498943016}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &498943018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498943017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82c3d4b547eb2d4081a99a574e3e7b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxX: 10
+  maxY: 4.9
+  minX: 10
+  minY: -7
+  speed: 0.05
 --- !u!1001 &529701561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7532,6 +7554,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2aa01ea216d3894e82cb74b5f3d5da8, type: 3}
+--- !u!1 &1812766639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6388229096789954853, guid: c2aa01ea216d3894e82cb74b5f3d5da8, type: 3}
+  m_PrefabInstance: {fileID: 1812766638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1812766640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812766639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82c3d4b547eb2d4081a99a574e3e7b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxX: 10
+  maxY: 0.1
+  minX: 10
+  minY: -12.45
+  speed: 0.05
 --- !u!1 &1818707851
 GameObject:
   m_ObjectHideFlags: 0
