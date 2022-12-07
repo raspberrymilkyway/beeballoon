@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bee : MonoBehaviour
 {
+    static public Bee S;
 
     [Header("Set These")]
     public float speed = 1;
@@ -16,6 +17,7 @@ public class Bee : MonoBehaviour
     
     void Start()
     {
+        S = this;
         rb = GetComponent<Rigidbody>();
         moves = new Vector3[] {new Vector3(-speed, 0, 0), new Vector3(speed, 0, 0), new Vector3(0, speed, 0), new Vector3(0, -speed, 0)};
         
@@ -39,6 +41,12 @@ public class Bee : MonoBehaviour
         }
         else{
             rb.velocity = basis;
+        }
+    }
+
+    void OnCollisionEnter(Collision coll) {
+        if(coll.gameObject.tag == "redboxofdoom") {
+            Destroy(this.gameObject);
         }
     }
 }
