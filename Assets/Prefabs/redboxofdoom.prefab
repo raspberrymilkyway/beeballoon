@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1886812604448626568}
   - component: {fileID: 4878203054210601524}
   - component: {fileID: 2075407831081263083}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: redboxofdoom
-  m_TagString: Untagged
+  m_TagString: redboxofdoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

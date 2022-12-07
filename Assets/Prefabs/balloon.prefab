@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8689462026600216934}
   - component: {fileID: 5018285318641884414}
   - component: {fileID: 449944345959646999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: oval
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 7079594458366364149}
   - component: {fileID: 860851840966890999}
   - component: {fileID: 2674141500008111921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,9 +204,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5887490133246540021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: balloon
-  m_TagString: Untagged
+  m_TagString: balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
