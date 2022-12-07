@@ -23,20 +23,23 @@ public class Bee : MonoBehaviour
     }
 
     
-    void Update()
+    private void Update()
     {
-        keyMove = -1;
+        int keyMove = -1;
 
         for(int i = 0; i < 4; i++) {
             if(Input.GetKey(arrows[i])) keyMove = i;
-            if(Input.Get(keys[i])) keyMove = i;
+            if(Input.GetKey(keys[i])) keyMove = i;
         }
 
-        Vector3 base = Vector3.zero;
+        Vector3 basis = Vector3.zero;
+
         if(keyMove > -1) {
-            base = moves[keyMove];
-            rb.velocity = speed * base;
+            basis = moves[keyMove];
+            rb.velocity = speed * basis;
         }
-        
+        else{
+            rb.velocity = basis;
+        }
     }
 }
