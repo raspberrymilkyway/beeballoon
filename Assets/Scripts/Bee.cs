@@ -16,6 +16,8 @@ public class Bee : MonoBehaviour
     private KeyCode[] arrows = new KeyCode[] {KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.UpArrow, KeyCode.DownArrow};
     private KeyCode[] keys = new KeyCode[] {KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.S};
     
+    private int facing = 1;
+
     void Start()
     {
         S = this;
@@ -37,6 +39,14 @@ public class Bee : MonoBehaviour
         Vector3 basis = Vector3.zero;
 
         if(keyMove > -1) {
+            if (keyMove == 0 && facing == 1){
+                facing = -1;
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if (keyMove == 1 && facing == -1){
+                facing = 1;
+                transform.rotation = Quaternion.Euler(0, 0, 180);
+            }
             basis = moves[keyMove];
             rb.velocity = speed * basis;
         }
