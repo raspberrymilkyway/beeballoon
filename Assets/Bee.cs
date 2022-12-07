@@ -10,15 +10,14 @@ public class Bee : MonoBehaviour
 
     [Header("Already Set")]
     private Rigidbody rb;
-    private Vector3[] moves = new Vector3[] {
-        Vector3.left, Vector3.right, Vector3.up, Vector3.down
-    };
+    private Vector3[] moves;
     private KeyCode[] arrows = new KeyCode[] {KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.UpArrow, KeyCode.DownArrow};
     private KeyCode[] keys = new KeyCode[] {KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.S};
     
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        moves = new Vector3[] {new Vector3(-speed, 0, 0), new Vector3(speed, 0, 0), new Vector3(0, speed, 0), new Vector3(0, -speed, 0)};
         
     }
 
