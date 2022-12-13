@@ -95,7 +95,7 @@ public class Bee : MonoBehaviour
                 transform.position = ori;
             }
             else{
-                SceneManager.LoadScene("LevelOne");
+                SceneManager.LoadScene("GameOver");
             }
         }
         if(coll.gameObject.tag == "balloon") {

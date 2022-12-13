@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZigZagDoom : MonoBehaviour
+public class CDoom : MonoBehaviour
 {
     [Header("Set Me")]
     public float maxTopX = 10.0f;

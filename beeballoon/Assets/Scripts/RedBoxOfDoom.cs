@@ -11,21 +11,20 @@ public class RedBoxOfDoom : MonoBehaviour
     public float minY = 10.0f;
     public float speed = 0.1f;
 
-    private int directionX = 1;
-    private int directionY = 1;
+    public int directionX = 1;
+    public int directionY = 1;
 
     public Vector3 pos{
         get { return(this.transform.position); }
         set { this.transform.position = value; }
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Move();
     }
 
-    void Move(){
+    public virtual void Move(){
         if (pos.x > maxX){
             directionX = -1;
         }
