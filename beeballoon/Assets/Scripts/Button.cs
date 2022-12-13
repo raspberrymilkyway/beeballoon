@@ -3,11 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Button : MonoBehaviour
 {
-    public void pleasePause(){
-        Debug.Log("pause button pressed");
+    public void pauseToggle(){
+        Image play = GameObject.Find("play").GetComponent<Image>();
+        TMP_Text pause = GameObject.Find("pause").GetComponent<TMP_Text>();
+        
+        if (play.enabled){
+            //Debug.Log("play button pressed");
+            Time.timeScale = 1;
+            play.enabled = false;
+            pause.text = "||";
+        }
+        else{
+            //Debug.Log("pause button pressed");
+            Time.timeScale = 0;
+            play.enabled = true;
+            pause.text = "";
+        }
     }
 
     public void audioToggle(){
