@@ -56,9 +56,10 @@ public class Bee : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision coll) {
+        Debug.Log(coll.gameObject.tag);
         if(coll.gameObject.tag == "redboxofdoom" || coll.gameObject.tag == "bomb") {
             //Destroy(this.gameObject);
-            SceneManager.LoadScene("level-1");
+            SceneManager.LoadScene("LevelOne");
         }
     }
 }

@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - redboxofdoom
+  - bomb
+  - bee
+  - background
+  - balloon
   layers:
   - Default
   - TransparentFX
@@ -12,11 +17,11 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - background
+  - bee
+  - balloon
+  - redboxofdoom
+  - bomb
   - 
   - 
   - 
@@ -40,4 +45,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 3588317981
+    locked: 0
+  - name: bee
+    uniqueID: 2061619327
+    locked: 0
+  - name: balloonbomb
+    uniqueID: 2770084765
+    locked: 0
+  - name: redboxofdoom
+    uniqueID: 767158985
     locked: 0
