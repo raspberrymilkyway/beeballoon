@@ -15,45 +15,37 @@ public class Button : MonoBehaviour
         //Debug.Log("found audioOn");
         Image audioOff = GameObject.Find("audioOff").GetComponent<Image>();
         //Debug.Log("found audioOff");
+        AudioSource music = GameObject.FindGameObjectWithTag("music").GetComponent<AudioSource>();
 
         if (audioOff.enabled){
             audioOn.enabled = true;
             audioOff.enabled = false;
+            music.mute = false;
         }
         else{
             audioOn.enabled = false;
             audioOff.enabled = true;
+            music.mute = true;
         }
     }
 
     public void changeScene(string scene){
         SceneManager.LoadScene(scene);
     }
-
     public void quitGame(){
         Application.Quit();
     }
 
+    //these could be done with .activeSelf but i'm frustrated and this works
+    // apparently full paths are absolutely necessary to do this.
     public void instructions(){
-        // GameObject inst = GameObject.FindWithTag("instructions");
-        // GameObject init = GameObject.FindWithTag("init");
-        // inst.SetActive(true);
-        // init.SetActive(false);
-
         GameObject.Find("Panel").transform.Find("Inst").gameObject.SetActive(true);
         GameObject.Find("Panel").transform.Find("Init").gameObject.SetActive(false);
     }
-
     public void credits(){
-        // GameObject cred = GameObject.FindWithTag("credits");
-        // GameObject init = GameObject.FindWithTag("init");
-        // cred.SetActive(true);
-        // init.SetActive(false);
-
         GameObject.Find("Panel").transform.Find("Cred").gameObject.SetActive(true);
         GameObject.Find("Panel").transform.Find("Init").gameObject.SetActive(false);
     }
-
     public void iniCred(){
         GameObject.Find("Panel").transform.Find("Init").gameObject.SetActive(true);
         GameObject.Find("Panel").transform.Find("Cred").gameObject.SetActive(false);
