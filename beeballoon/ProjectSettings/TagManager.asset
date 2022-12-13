@@ -9,6 +9,9 @@ TagManager:
   - bee
   - background
   - balloon
+  - music
+  - ui
+  - eventsystem
   layers:
   - Default
   - TransparentFX

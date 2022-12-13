@@ -13,9 +13,11 @@ public class Bee : MonoBehaviour
 
     [Header("Already Set")]
     public int totalLives = 3; //don't change this without changing ui
-    public Image beeTop;
-    public Image beeMid;
-    public Image beeBot;
+    public int currLevel = 1;
+
+    private Image beeTop;
+    private Image beeMid;
+    private Image beeBot;
 
     private Rigidbody rb;
     private Vector3[] moves;
@@ -34,6 +36,9 @@ public class Bee : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         sprend = GetComponent<SpriteRenderer>();
         moves = new Vector3[] {new Vector3(-speed, 0, 0), new Vector3(speed, 0, 0), new Vector3(0, speed, 0), new Vector3(0, -speed, 0)};
+        beeTop = GameObject.Find("bee3").GetComponent<Image>();
+        beeMid = GameObject.Find("bee2").GetComponent<Image>();
+        beeBot = GameObject.Find("bee1").GetComponent<Image>();
         beeTop.enabled = true;
         beeMid.enabled = true;
         beeBot.enabled = true;
