@@ -98,5 +98,9 @@ public class Bee : MonoBehaviour
                 SceneManager.LoadScene("LevelOne");
             }
         }
+        if(coll.gameObject.tag == "balloon") {
+            
+            Destroy(coll.gameObject);
+        }
     }
 }
