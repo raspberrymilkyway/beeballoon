@@ -15,13 +15,15 @@ public class Bee : MonoBehaviour
     private Vector3[] moves;
     private KeyCode[] arrows = new KeyCode[] {KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.UpArrow, KeyCode.DownArrow};
     private KeyCode[] keys = new KeyCode[] {KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.S};
-    
+    private SpriteRenderer sprend;
+
     private int facing = 1;
 
     void Start()
     {
         S = this;
         rb = GetComponent<Rigidbody>();
+        sprend = GetComponent<SpriteRenderer>();
         moves = new Vector3[] {new Vector3(-speed, 0, 0), new Vector3(speed, 0, 0), new Vector3(0, speed, 0), new Vector3(0, -speed, 0)};
         
     }
@@ -39,13 +41,13 @@ public class Bee : MonoBehaviour
         Vector3 basis = Vector3.zero;
 
         if(keyMove > -1) {
-            if (keyMove == 0 && facing == 1){
+            if (keyMove == 0 && facing != -1){
                 facing = -1;
-                transform.rotation = Quaternion.Euler(0, 0, 0);
+                sprend.flipX = false;
             }
-            else if (keyMove == 1 && facing == -1){
+            else if (keyMove == 1 && facing != 1){
                 facing = 1;
-                transform.rotation = Quaternion.Euler(0, 0, 180);
+                sprend.flipX = true;
             }
             basis = moves[keyMove];
             rb.velocity = speed * basis;
