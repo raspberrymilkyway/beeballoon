@@ -19,8 +19,8 @@ public class Bee : MonoBehaviour
     private Image beeMid;
     private Image beeBot;
 
-    private Rigidbody rb;
-    private Vector3[] moves;
+    private Rigidbody2D rb;
+    private Vector2[] moves;
     private KeyCode[] arrows = new KeyCode[] {KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.UpArrow, KeyCode.DownArrow};
     private KeyCode[] keys = new KeyCode[] {KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.S};
     private SpriteRenderer sprend;
@@ -33,9 +33,9 @@ public class Bee : MonoBehaviour
     void Start()
     {
         S = this;
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         sprend = GetComponent<SpriteRenderer>();
-        moves = new Vector3[] {new Vector3(-speed, 0, 0), new Vector3(speed, 0, 0), new Vector3(0, speed, 0), new Vector3(0, -speed, 0)};
+        moves = new Vector2[] {new Vector2(-speed, 0), new Vector2(speed, 0), new Vector2(0, speed), new Vector2(0, -speed)};
         beeTop = GameObject.Find("bee3").GetComponent<Image>();
         beeMid = GameObject.Find("bee2").GetComponent<Image>();
         beeBot = GameObject.Find("bee1").GetComponent<Image>();
@@ -76,7 +76,7 @@ public class Bee : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision coll) {
+    void OnCollisionEnter2D(Collision2D coll) {
         //Debug.Log(coll.gameObject.tag);
         if(coll.gameObject.tag == "redboxofdoom" || coll.gameObject.tag == "bomb") {
             //Destroy(this.gameObject);
