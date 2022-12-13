@@ -33,4 +33,33 @@ public class Button : MonoBehaviour
     public void quitGame(){
         Application.Quit();
     }
+
+    public void instructions(){
+        // GameObject inst = GameObject.FindWithTag("instructions");
+        // GameObject init = GameObject.FindWithTag("init");
+        // inst.SetActive(true);
+        // init.SetActive(false);
+
+        GameObject.Find("Panel").transform.Find("Inst").gameObject.SetActive(true);
+        GameObject.Find("Panel").transform.Find("Init").gameObject.SetActive(false);
+    }
+
+    public void credits(){
+        // GameObject cred = GameObject.FindWithTag("credits");
+        // GameObject init = GameObject.FindWithTag("init");
+        // cred.SetActive(true);
+        // init.SetActive(false);
+
+        GameObject.Find("Panel").transform.Find("Cred").gameObject.SetActive(true);
+        GameObject.Find("Panel").transform.Find("Init").gameObject.SetActive(false);
+    }
+
+    public void iniCred(){
+        GameObject.Find("Panel").transform.Find("Init").gameObject.SetActive(true);
+        GameObject.Find("Panel").transform.Find("Cred").gameObject.SetActive(false);
+    }
+    public void iniInst(){
+        GameObject.Find("Panel").transform.Find("Init").gameObject.SetActive(true);
+        GameObject.Find("Panel").transform.Find("Inst").gameObject.SetActive(false);
+    }
 }

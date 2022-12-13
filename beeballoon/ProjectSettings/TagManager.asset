@@ -12,6 +12,9 @@ TagManager:
   - music
   - ui
   - eventsystem
+  - instructions
+  - credits
+  - init
   layers:
   - Default
   - TransparentFX
