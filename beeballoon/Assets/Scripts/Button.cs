@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEditor;
 
 public class Button : MonoBehaviour
 {
@@ -31,16 +32,19 @@ public class Button : MonoBehaviour
         Image audioOff = GameObject.Find("audioOff").GetComponent<Image>();
         //Debug.Log("found audioOff");
         AudioSource music = GameObject.FindGameObjectWithTag("music").GetComponent<AudioSource>();
+        AudioSource balloonPop = GameObject.Find("bee-flight").GetComponent<AudioSource>();
 
         if (audioOff.enabled){
             audioOn.enabled = true;
             audioOff.enabled = false;
             music.mute = false;
+            balloonPop.mute = false;
         }
         else{
             audioOn.enabled = false;
             audioOff.enabled = true;
             music.mute = true;
+            balloonPop.mute = true;
         }
     }
 
