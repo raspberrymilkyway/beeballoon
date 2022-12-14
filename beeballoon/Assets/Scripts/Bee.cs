@@ -98,6 +98,8 @@ public class Bee : MonoBehaviour
             }
             else{
                 SceneManager.LoadScene("GameOver");
+                Timer.S.NewTime();
+                Score.S.ClearScore();
             }
         }
         if(coll.gameObject.tag == "balloon") {
@@ -105,5 +107,6 @@ public class Bee : MonoBehaviour
             Destroy(coll.gameObject);
             Score.S.BeeBalloon();
         }
+        
     }
 }

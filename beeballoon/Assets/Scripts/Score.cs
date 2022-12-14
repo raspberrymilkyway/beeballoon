@@ -31,4 +31,8 @@ public class Score : MonoBehaviour
         currScore += 10;
         scoreTxt.text = currScore.ToString();
     }
+
+    public void ClearScore() {
+        currScore = 0;
+    }
 }

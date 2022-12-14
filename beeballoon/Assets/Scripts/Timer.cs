@@ -7,13 +7,16 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    static public Timer S;
 
     public float timeValue = 240f;
     public TMP_Text timerTxt;
+    public bool reset;
 
     // Start is called before the first frame update
     void Start()
     {
+        S = this;
         
     }
 
@@ -21,13 +24,16 @@ public class Timer : MonoBehaviour
     void Update()
     {
         if(timeValue > 0) {
-            
+            reset = false;
             timeValue -= Time.deltaTime;
         }
         else {
-            
             timeValue = 0f;
-            SceneManager.LoadScene("GameOver");
+            
+            if(!reset) {
+                SceneManager.LoadScene("GameOver");
+                reset = true;
+            }
         }
 
         DisplayTime(timeValue);
@@ -37,11 +43,17 @@ public class Timer : MonoBehaviour
             
         if(timeDis < 0) {
             timeDis = 0;
+            Score.S.ClearScore();
         }
 
         float minutes = Mathf.FloorToInt(timeDis/60);
         float seconds = Mathf.FloorToInt(timeDis % 60);
 
         timerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void NewTime()
+    {
+        timeValue = 240f;
     }
 }

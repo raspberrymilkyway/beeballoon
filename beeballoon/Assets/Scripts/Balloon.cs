@@ -40,6 +40,7 @@ public class Balloon : MonoBehaviour
             int x = int.Parse(lvl.text);
             x++;
             lvl.text = x.ToString();
+
             if(senam == "LevelOne") {
                 SceneManager.LoadScene("LevelTwo");
             }
@@ -51,6 +52,14 @@ public class Balloon : MonoBehaviour
             }
             if(senam == "LevelFour") {
                 SceneManager.LoadScene("GameOver");
+            }
+
+            Timer.S.NewTime();
+            
+            if(beeBalloon != null) {
+                if(childs > 0) {
+                    beeBalloon.SetActive(false);
+                }
             }
         }
     }

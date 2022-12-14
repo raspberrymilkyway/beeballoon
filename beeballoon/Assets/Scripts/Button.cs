@@ -46,6 +46,8 @@ public class Button : MonoBehaviour
 
     public void changeScene(string scene){
         SceneManager.LoadScene(scene);
+        Timer.S.NewTime();
+        Score.S.ClearScore();
     }
     public void quitGame(){
         Application.Quit();
