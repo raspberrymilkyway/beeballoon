@@ -24,6 +24,7 @@ public class Bee : MonoBehaviour
     private KeyCode[] arrows = new KeyCode[] {KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.UpArrow, KeyCode.DownArrow};
     private KeyCode[] keys = new KeyCode[] {KeyCode.A, KeyCode.D, KeyCode.W, KeyCode.S};
     private SpriteRenderer sprend;
+    private AudioSource pop;
 
     private int facing = 1;
     private int livesLeft;
@@ -35,6 +36,7 @@ public class Bee : MonoBehaviour
         S = this;
         rb = GetComponent<Rigidbody2D>();
         sprend = GetComponent<SpriteRenderer>();
+        pop = GetComponent<AudioSource>();
         moves = new Vector2[] {new Vector2(-speed, 0), new Vector2(speed, 0), new Vector2(0, speed), new Vector2(0, -speed)};
         beeTop = GameObject.Find("bee3").GetComponent<Image>();
         beeMid = GameObject.Find("bee2").GetComponent<Image>();
@@ -99,7 +101,7 @@ public class Bee : MonoBehaviour
             }
         }
         if(coll.gameObject.tag == "balloon") {
-            
+            pop.Play();
             Destroy(coll.gameObject);
         }
     }
