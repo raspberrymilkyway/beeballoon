@@ -36,7 +36,7 @@ public class FileSave : MonoBehaviour
                 lastPlayed.text = "No level\nlast played.";
             }
             else{
-                lastPlayed.text = lastPlayed.text + "\n" + level.ToString();
+                lastPlayed.text = lastPlayed.text + "\nLevel " + level.ToString();
             }
         }
     }
