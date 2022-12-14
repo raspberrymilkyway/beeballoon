@@ -1009,6 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastPlayed: {fileID: 307124486}
+  gameOver: 0
 --- !u!1 &437062219
 GameObject:
   m_ObjectHideFlags: 0

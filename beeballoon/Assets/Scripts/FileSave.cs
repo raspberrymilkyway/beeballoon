@@ -20,6 +20,7 @@ public class FileSave : MonoBehaviour
 {
     [Header("Set Me")]
     public TMP_Text lastPlayed;
+    public bool gameOver = true;
 
     //https://www.red-gate.com/simple-talk/development/dotnet-development/saving-game-data-with-unity/
     string playName;
@@ -29,12 +30,14 @@ public class FileSave : MonoBehaviour
     int level;
 
     void Start(){
-        load();
-        if (level == 0){
-            lastPlayed.text = "No level\nlast played.";
-        }
-        else{
-            lastPlayed.text = lastPlayed.text + "\n" + level.ToString();
+        if (!gameOver){
+            load();
+            if (level == 0){
+                lastPlayed.text = "No level\nlast played.";
+            }
+            else{
+                lastPlayed.text = lastPlayed.text + "\n" + level.ToString();
+            }
         }
     }
 
