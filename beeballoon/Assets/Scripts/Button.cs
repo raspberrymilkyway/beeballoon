@@ -69,4 +69,13 @@ public class Button : MonoBehaviour
         GameObject.Find("Panel").transform.Find("Init").gameObject.SetActive(true);
         GameObject.Find("Panel").transform.Find("Inst").gameObject.SetActive(false);
     }
+
+    public void saveMenu(){
+        GameObject.Find("Panel").transform.Find("SaveScreen").gameObject.SetActive(true);
+        GameObject.Find("Panel").transform.Find("Menu").gameObject.SetActive(false);
+    }
+    public void menu(){
+        GameObject.Find("Panel").transform.Find("Menu").gameObject.SetActive(true);
+        GameObject.Find("Panel").transform.Find("SaveScreen").gameObject.SetActive(false);
+    }
 }
