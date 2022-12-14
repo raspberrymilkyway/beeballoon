@@ -103,6 +103,7 @@ public class Bee : MonoBehaviour
         if(coll.gameObject.tag == "balloon") {
             pop.Play();
             Destroy(coll.gameObject);
+            Score.S.BeeBalloon();
         }
     }
 }
