@@ -18,13 +18,6 @@ public class Score : MonoBehaviour
         S = this;
 
         currScore = 0;
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void BeeBalloon() {
