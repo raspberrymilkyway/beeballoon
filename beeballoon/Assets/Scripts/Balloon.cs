@@ -1,28 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Balloon : MonoBehaviour
 {
-    static public Balloon S;
-    
-    private Rigidbody rb;
-    
+    public GameObject renter;
+    public int childs;
+    public GameObject beeBalloon;
+
+    Scene sen;
+    string senam;
+
     void Start()
     {
-        S = this;
-        rb = GetComponent<Rigidbody>();
+        sen = SceneManager.GetActiveScene();
+        senam = sen.name;
+
+        beeBalloon.SetActive(false);
     }
 
     
     void Update()
     {
-        
-    }
+        childs = renter.transform.childCount;
 
-    void OnCollisionEnter(Collision coll) {
-        if(coll.gameObject.tag == "bee") {
-            Destroy(this.gameObject);
+        if(beeBalloon != null) {
+            if(childs <= 0) {
+                beeBalloon.SetActive(true);
+            }
+        }
+        else {
+            if(senam == "LevelOne") SceneManager.LoadScene("LevelTwo");
+            if(senam == "LevelTwo") SceneManager.LoadScene("LevelThree");
+            if(senam == "LevelThree") SceneManager.LoadScene("LevelFour");
+            if(senam == "LevelFour") SceneManager.LoadScene("GameOver");
         }
     }
+
+
 }
