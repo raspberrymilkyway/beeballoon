@@ -1,6 +1,5 @@
 # beeballoon
-here are our weird commits; main does not matter
 
-we ditched this implementation
+we believe you will have to open your own project and then copy and paste the content from unity if you would like to work with our game.
 
-please move your way over to the branch.
+branch project was formerly main
